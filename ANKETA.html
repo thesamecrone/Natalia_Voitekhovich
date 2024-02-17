@@ -8,10 +8,33 @@
 <body>
     
     <script>
-       const name = prompt('Ваше ФИО?', '');
-       const age = prompt('Ваш возраст в годах?', '');
-       const human = confirm('Вы человек?');
-       alert('ваше ФИО: ' + name + '\n' + 'ваш возраст в годах: ' + age + '\n' + 'раса: человек');
+       let surname = prompt('Ваша фамилия?', '');
+       let name = prompt('Ваше имя?', '');
+       let patron = prompt('Ваше отчество?', '');
+       let age = prompt('Ваш возраст в годах?', '');
+       let ages = parseInt(age);
+       let agedays = age*365;
+       let fiveyears = ages+5;
+       let gender;
+       let sex = confirm ('Ваш пол мужской?');
+       
+        if (sex) 
+            gender = ('Мужской');
+        else
+            gender = ('Женский');
+
+       let retired;
+        if (gender == 'Мужской' && age<63)
+            retired = 'нет';
+        else
+            retired = 'да';
+
+        if (gender = 'Женский' && age<58)
+            retired = 'нет';
+        else
+            retired = 'да';
+    
+        alert('ваше ФИО: ' + surname + ' ' + name + ' ' + patron + '\n' + 'ваш возраст в годах: ' + age + '\n' + 'ваш возраст в днях: ' + agedays +'\n' + 'через 5 лет вам будет: ' + fiveyears + '\n' + 'ваш пол: ' + gender + '\n' + 'вы на пенсии: ' + retired);
     </script>
 </body>
 </html>
