@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+				initial-scale=1.0">
+    <title>Video Player-GFG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="karaoke.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="gfg">
+
+        <svg viewbox="0 0 100 20">
+            <defs>
+                <linearGradient id="gradient" x1="1" x2="1" y1="1" y2="1.5">
+                    <stop offset="5%" stop-color="#d578f1" />
+                    <stop offset="95%" stop-color="#a070af" />
+                </linearGradient>
+                <pattern id="wave" x="0" y="0" width="120" height="20" patternUnits="userSpaceOnUse">
+                    <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z"
+                        mask="url(#mask)" fill="url(#gradient)">
+                        <animateTransform attributeName="transform" begin="0s" dur="1.5s" type="translate" from="0,0"
+                            to="40,0" repeatCount="indefinite" />
+                    </path>
+                </pattern>
+            </defs>
+            <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#wave)" fill-opacity="0.5">KARAOKEE</text>
+            <text text-anchor="middle" x="50" y="15" font-size="17" fill="url(#gradient)"
+                fill-opacity="0.1">LOADING</text>
+        </svg>
+
+        <h2>KARAOKEEE</h2>
+        <p>Zero Videoplayer</p>
+    </div>
+
+
+
+    <!-- Video container -->
+    <div class="video-container">
+        <img src="https://portsvaevents.com/wp-content/uploads/2023/06/Karaoke.jpg" id="video-thumbnail">
+        <video id="video">
+
+            <!-- Video source -->
+            <source src="https://wave.video/embed/6651f56a4e1cde378a3d1247/6651f5706938a852bc4ad589.mp4"
+                type="video/mp4">
+        </video>
+
+        <!-- Controlers continer -->
+        <div class="controls">
+
+            <!-- Left controller div -->
+            <div class="left">
+                <button id="skipminus-10">
+                    <i class="fa-solid fa-backward"></i>
+                </button>
+                <button id="play-pause">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <button id="skip-10">
+                    <i class="fa-solid fa-forward"></i>
+                </button>
+            </div>
+
+            <!-- div for progress bar -->
+            <div class="video-timer">
+                <span id="current-time">00:00</span>
+                <span id="separator">/</span>
+                <span id="max-duration">00:00</span>
+            </div>
+            <div class="playback-line">
+                <div class="progress-bar"></div>
+
+            </div>
+
+            <!-- Right controller div -->
+            <div class="right">
+                <div class="volume-container">
+                    <div id="mute">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="karaoke.js"></script>
+</body>
+
+</html>
