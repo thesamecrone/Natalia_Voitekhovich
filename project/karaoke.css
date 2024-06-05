@@ -14,6 +14,43 @@ body {
 	background-size: cover;
 }
 
+header {
+	width: 100%;
+	height: 80px;
+}
+
+form {
+	position: relative;
+	width: 300px;
+	margin: 0 auto;
+	background: #e4bfe220;
+	border-radius: 25px;
+  }
+  input, button {
+	border: none;
+	outline: none;
+	background: transparent;
+  }
+  input {
+	width: 100%;
+	height: 42px;
+	padding-left: 15px;
+  }
+  button {
+	height: 42px;
+	width: 42px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+  }
+  button:before {
+	content: "\f002";
+	font-family: FontAwesome;
+	font-size: 16px;
+	color: #f4f4f4;
+  }
+
 svg { 
 	font-weight: bold;
 	height: auto;}
@@ -124,6 +161,48 @@ img {
 	top: 1.5px;
 }
 
+input[type=range]  {
+	width: 200px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	overflow: hidden;
+	height: 7px;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+	height: 7px;
+	background-color: rgb(235, 161, 222);
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+	background: #87f6f6;
+	cursor: pointer;
+	width:15px;
+	height: 15px;
+	-webkit-appearance: none;
+	margin-top: -4px;
+	box-shadow: -200px  0 0 200px  #b61bb3;
+
+  }
+
+  input[type=range]::-moz-range-track {
+	  height: 7px;
+	  background-color: rgb(138, 245, 249);
+  }
+
+
+ input[type=range]::-moz-range-thumb {
+	background: #ecf0f1;
+	cursor: pointer;
+	height: 7px;
+	border-radius:0px;
+	box-shadow: -200px  0px 0px 200px   #43e5f7;
+	padding: 0px;
+	margin: 0px;
+  }
+
 .fa-volume-up,
 .fa-solid {
 	font-size: small;
@@ -146,6 +225,7 @@ input {
 
 #volume {
 	position: relative;
+	background-color: #de03f1;
 	left: 5px;
 	width: 50px;
 	height: 3px;
