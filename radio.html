@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internet Radio Station</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="player">
+    <h1>Internet Radio Station</h1>
+    <button id="play-pause-btn">Play/Pause</button>
+    <input type="range" id="seek-bar" value="0" max="100">
+    <audio id="player" src="" controls></audio>
+    <ul id="stations-list">
+      <li><a href="#" data-station="station1">Station 1</a></li>
+      <li><a href="#" data-station="station2">Station 2</a></li>
+      <li><a href="#" data-station="station3">Station 3</a></li>
+      <!-- add more stations here -->
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
