@@ -10,14 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
     <div class="top">
-        <div class="head">
+        <a class="head" href="#">
             <img src="logo.png" class="logo" alt="pic">
-        </div>
+        </a>
 
         <div class="navbar">
             <a class="nav" href="https://twitter.com/" target="_blank">
@@ -36,8 +35,8 @@
 
         <button id="scroll-to-top">&#9650;</button>
 
-        <div class="call">
-            <img src="Icon (4).png" id="phone-icon" class="phone" alt="pic">
+        <div class="call" id="phone-icon">
+            <img src="Icon (4).png" class="phone" alt="pic">
             <div class="callme">
                 <h3>Call anytime</h3>
                 <p class="number">+ 98 (000) - 9630</p>
@@ -55,30 +54,27 @@
             </form>
         </div>
 
-        <div class="mail">
+        <a href="mailto:ambed@agrios.com" class="mail">
             <img src="Icon (5).png" class="phone" alt="pic">
             <div class="callme">
                 <h3>Send email</h3>
-                <p class="number" id="copy-text">ambed@agrios.com</p>
+                <p class="number">ambed@agrios.com</p>
             </div>
-        </div>
+        </a>
 
-        <div class="location">
-            <a href="https://maps.app.goo.gl/9ChPsKgcFPomBLhX7" target="_blank">
-                <img src="Icon6.png" class="phone" alt="pic">
-            </a>
+        <a class="location" href="https://maps.app.goo.gl/9ChPsKgcFPomBLhX7" target="_blank">
+            <img src="Icon6.png" class="phone" alt="pic">
             <div class="callme">
                 <h3>380 St Kilda Road</h3>
                 <p class="number">Melbourne, Australia</p>
             </div>
-        </div>
+        </a>
     </div>
 
     <section>
         <nav>
             <div class="menu">
-                <p class="home">Home</p>
-                <img src="Icon7.png" class="arrow" alt="pic">
+                <a href="#" class="home">Home</a>
             </div>
 
             <p class="menuu">About</p>
@@ -107,8 +103,14 @@
         </nav>
 
         <div class="find">
-            <img src="Link - search.png" id="search-icon" class="finder">
-            <img src="header.png" class="basket">
+            <img src="Link - search.png" class="finder" id="search-icon">
+            <form id="search-form">
+                <input type="search" id="search-input" placeholder="Search...">
+            </form>
+            <img src="header.png" id="cart-icon" class="basket">
+            <div id="cart-content" style="display: none;">
+                <p id="cart-message">Here is empty</p>
+            </div>
             <div class="circle">0</div>
         </div>
     </section>
@@ -410,7 +412,7 @@
     <footer>
         <div class="columns">
             <div class="column1">
-                <img src="Link - logo → logo@2x-white-1.webp.png" class="logo2" alt="pic">
+                <a href="#"><img src="Link - logo → logo@2x-white-1.webp.png" class="logo2" alt="pic"></a>
                 <p class="texting">There are many variations of passages
                     of lorem ipsum available, but the
                     majority suffered.</p>
@@ -512,18 +514,14 @@
     </div>
 
     <script>
-        const copyText = document.getElementById('copy-text');
+        document.getElementById("search-icon").addEventListener("click", function () {
+            document.getElementById("search-input").focus();
+            document.getElementById("search-form").classList.toggle("show");
+        });
 
-        copyText.addEventListener('mousedown', (e) => {
-            if (e.button === 0) { // Check if left mouse button was clicked
-                const textarea = document.createElement('textarea');
-                textarea.value = copyText.textContent;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-                alert('Text copied!');
-            }
+        document.getElementById("cart-icon").addEventListener("click", function () {
+            var cartContent = document.getElementById("cart-content");
+            cartContent.style.display = (cartContent.style.display === "none") ? "block" : "none";
         });
 
         const phoneIcon = document.getElementById('phone-icon');
