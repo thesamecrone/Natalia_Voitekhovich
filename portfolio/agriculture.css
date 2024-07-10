@@ -10,6 +10,10 @@ body {
     background-attachment: fixed;
 }
 
+a {
+    text-decoration: none;
+}
+
 #scroll-to-top {
     width: 50px;
     height: 50px;
@@ -250,11 +254,56 @@ section {
 }
 
 .arrow {
+    margin-left: 5px;
     padding-top: 3px;
     width: 7.88px;
     height: 36px;
     flex-shrink: 0;
 }
+
+.menu1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-right: 5px;
+    padding-left: 55px;
+    color: #878680;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    align-items: center;
+  }
+  
+  .menu-label {
+    cursor: pointer; /* change cursor to a hand pointer on hover */
+  }
+  
+  .menu1 .submenu {
+    position: absolute;
+    top: 100%; /* position the submenu below the menu label */
+    left: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    width: 255px;
+    border-radius: 10px;
+    display: none; /* hide the submenu by default */
+  }
+  
+  .menu1:hover .submenu {
+    display: block; /* show the submenu when the menu label is hovered */
+  }
+  
+  .menu1 .submenu li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  
+  .menu1 .submenu a {
+    text-decoration: none;
+    color: #666;
+  }
 
 .menu {
     display: flex;
@@ -663,6 +712,10 @@ span {
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+.plays {
+    margin-left: 7px;
 }
 
 .offer {
