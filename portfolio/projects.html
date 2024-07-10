@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
-    <link rel="stylesheet" href="services2.css">
+    <title>Projects</title>
+    <link rel="stylesheet" href="projects.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -117,73 +117,26 @@
     <div class="inner">
         <div>
             <a href="#" class="house">HOME / </a>
-            <a href="#" class="house">Agriculture Products</a>
+            <a href="#" class="house">PROJECTS</a>
         </div>
-        <h1>Services</h1>
+        <h1>Projects</h1>
     </div>
 
-    <section class="page1">
-        <div class="box1">
-            <div class="categories">
-                <a href="#" class="categ">Categories</a>
-                <a href="#" class="cate">Agriculture Products</a>
-                <a href="#" class="cate">Organic Products</a>
-                <a href="#" class="cate">Fresh Vegetables</a>
-                <a href="#" class="cate">Dairy Products</a>
-                <a href="#" class="cate">Harvest</a>
-            </div>
-            <div class="need">
-                <p class="needs">Need Help?</p>
-                <p class="letter">Speak with a human to filling out a
-                    form? call corporate office and we
-                    will connect you with a team
-                    member help.</p>
-                <p class="numbers">+92 (000) -9630</p>
-                <a class="butt" href="#">Start Shopping Now</a>
-            </div>
-        </div>
-        <div class="box2">
-            <img src="services/c42e9cf40d0a9b108fae19c4099ac0db.png" alt="pic" class="grass">
-            <p class="product">Agriculture Products</p>
-            <p class="paragr">Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui dolorem ipsum quia
-                quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Aelltes port lacus quis
-                enim var sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry. Lorem Ipsum has been the ndustry standard dummy text ever since
-                the 1500s.</p>
-            <p class="paragr">It has survived not only five centuries. Lorem Ipsum is simply dummy text of the new design printng and
-                type setting Ipsum take a look at our round. When an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-                electronic typesetting.</p>
-            <div class="shelf">
-                <div class="one">
-                    <img src="services/934d1a05c9ed7b6e23d74e536b385e7d.png" alt="pic" class="wood">
-                    <p class="benefit">Our Benefits</p>
-                    <p class="paragr">It has survived not only five centuries em simply
-                        dummy text. Duis aute irure dolor in eprehenderit
-                        in voluptate velit esse cillum.</p>
-                </div>
-                <div class="one">
-                    <img src="services/bc397d295ed957688a6cfd7ce7d64d3e.png" alt="pic" class="wood">
-                    <p class="smth">Nsectetur cing elit.
-                        Suspe ndisse suscipit sagittis leo.
-                        Entum estibulum dignissim posuere.
-                        Lorem Ipsum on the tend to repeat.</p>
-                </div>
-            </div>
-
-            <div class="string">World’s hottest destinations for vegans
-                <div class="smile"></div>
-            </div>
-            <div class="string">Let’s grow naturaly and live naturaly
-                <div class="smile"></div>
-            </div>
-            <p class="paragra">Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum leo ligula, molestie
-                ullamcorper vulputate vitae sodales commodo nisl. Nulla facilisi. Pellentesque est metus many of
-                some form.</p>
-            <div class="string">Best vegetables for your healthy hair
-                <div class="smile"></div>
-            </div>
-        </div>
+    <section class="grid">
+        <div class="grid-container">
+            <div class="grid-item1">Easy
+                Harvesting</div>
+            <div class="grid-item2">Agriculture
+                Farming</div>
+            <div class="grid-item3">Ecological
+                Farming</div>
+            <div class="grid-item4">Organic
+                Solutions</div>
+            <div class="grid-item5">Fresh
+                Products</div>
+            <div class="grid-item6">Healthy
+                Food</div>
+          </div>
     </section>
 
     <footer>
@@ -289,49 +242,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        document.getElementById("search-icon").addEventListener("click", function () {
-            document.getElementById("search-input").focus();
-            document.getElementById("search-form").classList.toggle("show");
-        });
-
-        document.getElementById("cart-icon").addEventListener("click", function () {
-            var cartContent = document.getElementById("cart-content");
-            cartContent.style.display = (cartContent.style.display === "none") ? "block" : "none";
-        });
-
-        const phoneIcon = document.getElementById('phone-icon');
-        const callbackForm = document.getElementById('callback-form');
-        const closeButton = document.getElementById('close-button');
-
-        phoneIcon.addEventListener('click', () => {
-            callbackForm.style.display = 'block';
-        });
-
-        callbackForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const phoneNumber = document.getElementById('phone-number').value;
-        });
-
-        closeButton.addEventListener('click', () => {
-            callbackForm.style.display = 'none';
-        });
-
-        const scrollToTopButton = document.getElementById('scroll-to-top');
-
-        scrollToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-
-            scrollToTopButton.classList.add('animated');
-            setTimeout(() => {
-                scrollToTopButton.classList.remove('animated');
-            }, 500);
-        });
-    </script>
 </body>
 </html>
