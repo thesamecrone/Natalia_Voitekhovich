@@ -694,15 +694,10 @@ h1 {
     border-radius: 10px;
     background: #F8F7F0;
     display: flex;
-    width: 370px;
-    height: 396px;
     padding: 40px 190.42px 35px 50px;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: flex-start;
     gap: 11px;
-    border-radius: 10px;
-    background: #F8F7F0;
 }
 
 .skin {
