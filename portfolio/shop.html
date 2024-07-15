@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top">
+        <a class="head" href="#">
+            <img src="logo.png" class="logo" alt="pic">
+        </a>
+
+        <div class="navbar">
+            <a class="nav" href="https://twitter.com/" target="_blank">
+                <img src="Icon.png" class="icon" alt="pic">
+            </a>
+            <a class="nav" href="https://www.facebook.com/" target="_blank">
+                <img src="Icon (1).png" class="icon" alt="pic">
+            </a>
+            <a class="nav" href="https://pinterest.com/" target="_blank">
+                <img src="Icon (2).png" class="icon" alt="pic">
+            </a>
+            <a class="nav" href="https://www.instagram.com/" target="_blank">
+                <img src="Icon (3).png" class="icon" alt="pic">
+            </a>
+        </div>
+
+        <button id="scroll-to-top">&#9650;</button>
+
+        <div class="call" id="phone-icon" title="Please click to request a callback">
+            <img src="Icon (4).png" class="phone" alt="pic">
+            <div class="callme">
+                <h3>Call anytime</h3>
+                <p class="number">+ 98 (000) - 9630</p>
+            </div>
+        </div>
+
+        <div id="callback-form" style="display: none;">
+            <h2>Get in touch with us!</h2>
+            <p class="callus">Please enter your name and phone number to schedule a callback.</p>
+            <form>
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="tel" id="phone-number" placeholder=" Your Phone Number">
+                <button type="submit" class="phoneme">Call me</button>
+                <button type="button" id="close-button">X</button>
+            </form>
+        </div>
+
+        <a href="mailto:ambed@agrios.com" class="mail">
+            <img src="Icon (5).png" class="phone" alt="pic">
+            <div class="callme">
+                <h3>Send email</h3>
+                <p class="number">ambed@agrios.com</p>
+            </div>
+        </a>
+
+        <a class="location" href="https://maps.app.goo.gl/9ChPsKgcFPomBLhX7" target="_blank" title="Google Maps">
+            <img src="Icon6.png" class="phone" alt="pic">
+            <div class="callme">
+                <h3>380 St Kilda Road</h3>
+                <p class="number">Melbourne, Australia</p>
+            </div>
+        </a>
+    </div>
+
+    <section class="page">
+        <nav>
+            <div class="menu">
+                <a href="agriculture.html" class="home" title="Main page">Home</a>
+            </div>
+
+            <a href="about.html" class="menuu" title="Learn more about us">About</a>
+
+            <div class="menu1">
+                <p class="menu-label">Services</p>
+                <img src="Icon (6).png" class="arrow" alt="pic">
+                <ul class="submenu">
+                    <li><a href="services.html" class="menuu" title="Healthy Food for Good Growth">Services</a></li>
+                    <li><a href="services2.html" class="menuu" title="Categories">Agriculture Products</a></li>
+                </ul>
+            </div>
+
+            <div class="menu">
+                <a href="projects.html" class="menuu">Projects</a>
+            </div>
+
+            <div class="menu">
+                <a href="news.html" class="menuu">News</a>
+            </div>
+
+            <div class="menu">
+                <p class="menuu">Shop</p>
+            </div>
+
+            <p class="menuu">Contact</p>
+        </nav>
+
+        <div class="find">
+            <img src="Link - search.png" class="finder" id="search-icon">
+            <form id="search-form">
+                <input type="search" id="search-input" placeholder="Search...">
+            </form>
+            <img src="header.png" id="cart-icon" class="basket">
+            <div id="cart-content" style="display: none;">
+                <p id="cart-message">Here is empty</p>
+            </div>
+            <div class="circle">0</div>
+        </div>
+    </section>
+
+    <div class="inner">
+        <div>
+            <a href="#" class="house">HOME / </a>
+            <a href="#" class="house">SHOP</a>
+        </div>
+        <h1>Our Shop</h1>
+    </div>
+
+    <section class="pages">
+        <div class="block1">
+            <form class="lookfor">
+                <input type="search" id="search-inputs" placeholder="Search products...">
+                <label for="search-inputs">
+                </label>
+            </form>
+
+            <div class="price-filter">
+                <p class="cost">Price</p>
+                <input type="range" id="price-range" min="20" max="100" value="20" oninput="updatePriceLabel()">
+                <label for="price-range"></label>
+                <div class="flexbox">
+                    <span id="price-label">100$</span>
+                    <button id="apply-button">Apply</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="block2">
+            <div class="product-cards">
+                <div class="pagination">
+                    Showing 1–9 of 9 results
+                    <button class="sort-button">Sort</button>
+                </div>
+
+                <div class="cards-container">
+                    <div class="card1">
+                        <img src="shop/9846d7967af7adf2bdbb2b63ab471238.jpg" alt="Product image" class="product">
+                        <h5>Apples</h5>
+                        <p class="dollar">$50.00</p>
+                    </div>
+
+                    <div class="card2">
+                        <img src="shop/1694e5132f9297a102f515bc5e5b74ec.jpg" alt="Product image" class="product">
+                        <h5>Bananas</h5>
+                        <p class="dollar">$20.00</p>
+                    </div>
+
+                    <div class="card3">
+                        <img src="shop/c66c04d407f153bebf6ee51520e309f9.jpg" alt="Product image" class="product">
+                        <h5>Carrot</h5>
+                        <p class="dollar">$50.00</p>
+                    </div>
+
+                    <div class="card4">
+                        <img src="shop/518232e6103dca3e15ea26ee403346b9.jpg" alt="Product image" class="product">
+                        <h5>Garlic</h5>
+                        <p class="dollar">$20.00</p>
+                    </div>
+
+                    <div class="card5">
+                        <img src="shop/145b0e8246f1f34fac6729e7fd52a07e.jpg" alt="Product image" class="product">
+                        <h5>Grapes</h5>
+                        <p class="dollar">$100.00</p>
+                    </div>
+
+                    <div class="card6">
+                        <img src="shop/55e89492860a4a6f89a0bd2b221630fe.jpg" alt="Product image" class="product">
+                        <h5>Lettuce</h5>
+                        <p class="dollar">$30.00</p>
+                    </div>
+
+                    <div class="card7">
+                        <img src="shop/bedd52a8d0504170b14939dd44a5f9e4.jpg" alt="Product image" class="product">
+                        <h5>Onions</h5>
+                        <p class="dollar">$20.00</p>
+                    </div>
+
+                    <div class="card8">
+                        <img src="shop/2bf68a89da7ff5d51056e1ae5dbbc7a6.jpg" alt="Product image" class="product">
+                        <h5>Potatos</h5>
+                        <p class="dollar">$30.00</p>
+                    </div>
+
+                    <div class="card9">
+                        <img src="shop/94c085d133bdc4eb40467681c7a0fca1.jpg" alt="Product image" class="product">
+                        <h5>Red Grapes</h5>
+                        <p class="dollar">$100.00</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        document.getElementById("search-icon").addEventListener("click", function () {
+            document.getElementById("search-input").focus();
+            document.getElementById("search-form").classList.toggle("show");
+        });
+
+        document.getElementById("cart-icon").addEventListener("click", function () {
+            var cartContent = document.getElementById("cart-content");
+            cartContent.style.display = (cartContent.style.display === "none") ? "block" : "none";
+        });
+
+        const phoneIcon = document.getElementById('phone-icon');
+        const callbackForm = document.getElementById('callback-form');
+        const closeButton = document.getElementById('close-button');
+
+        phoneIcon.addEventListener('click', () => {
+            callbackForm.style.display = 'block';
+        });
+
+        callbackForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phoneNumber = document.getElementById('phone-number').value;
+        });
+
+        closeButton.addEventListener('click', () => {
+            callbackForm.style.display = 'none';
+        });
+
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            scrollToTopButton.classList.add('animated');
+            setTimeout(() => {
+                scrollToTopButton.classList.remove('animated');
+            }, 500);
+        });
+
+        let priceLabel = document.getElementById('price-label');
+
+        function updatePriceLabel() {
+            const values = document.getElementById('price-range').value.split(',');
+            const minValue = parseInt(values[0]);
+            const maxValue = parseInt(values[1]);
+            priceLabel.textContent = minValue + '$ - ' + maxValue + '$';
+        }
+
+        updatePriceLabel();
+
+        const productCards = document.querySelectorAll('.card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9');
+        const applyButton = document.getElementById('apply-button');
+
+        productCards.forEach(card => {
+            card.classList.add('visible');
+        });
+
+        applyButton.addEventListener('click', () => {
+            const values = document.getElementById('price-range').value.split(',');
+            const minValue = parseInt(document.getElementById('price-range').value);
+            const maxValue = parseInt(document.getElementById('price-range').max);
+
+            productCards.forEach(card => {
+                const price = parseFloat(card.querySelector('.dollar').textContent.replace('$', ''));
+                if (price < minValue || price > maxValue) {
+                    card.classList.remove('visible');
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
