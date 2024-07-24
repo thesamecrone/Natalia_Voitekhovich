@@ -137,17 +137,28 @@
                 <input type="range" id="price-range" min="20" max="100" value="20" oninput="updatePriceLabel()">
                 <label for="price-range"></label>
                 <div class="flexbox">
-                    <span id="price-label">100$</span>
+                    <span id="price-label">20$</span>
                     <button id="apply-button">Apply</button>
                 </div>
+            </div>
+
+            <div class="crisper2">
+                <p class="late2">Categories</p>
+                <a class="list" href="services2.html">Agriculture</a>
+                <a class="list" href="#">Farm</a>
+                <a class="list" href="#">Farming</a>
+                <a class="list" href="#">Fresh Vegetables</a>
+                <a class="list" href="#">Harvest</a>
+                <a class="list" href="#">Organic Food</a>
             </div>
         </div>
 
         <div class="block2">
             <div class="product-cards">
+                <img src="shop/image.png" alt="pic">
                 <div class="pagination">
                     Showing 1–9 of 9 results
-                    <button class="sort-button">Sort</button>
+                    <button class="sort-button" id="sort-button">Сортировка</button>
                 </div>
 
                 <div class="cards-container">
@@ -208,8 +219,111 @@
                 </div>
             </div>
         </div>
-
     </section>
+
+    <footer>
+        <div class="columns">
+            <div class="column1">
+                <a href="#"><img src="Link - logo → logo@2x-white-1.webp.png" class="logo2" alt="pic"></a>
+                <p class="texting">There are many variations of passages
+                    of lorem ipsum available, but the
+                    majority suffered.</p>
+                <div class="navbar2">
+                    <a class="nav1" href="https://twitter.com/" target="_blank">
+                        <img src="Icon (22).png" alt="pic">
+                    </a>
+                    <a class="nav1" href="https://www.facebook.com/" target="_blank">
+                        <img src="Icon (23).png" alt="pic">
+                    </a>
+                    <a class="nav1" href="https://pinterest.com/" target="_blank">
+                        <img src="Icon (24).png" alt="pic">
+                    </a>
+                    <a class="nav1" href="https://www.instagram.com/" target="_blank">
+                        <img src="Icon (25).png" alt="pic">
+                    </a>
+                </div>
+            </div>
+            <div class="column2">
+                <p class="titles">Explore</p>
+                <img src="span.elementor-divider-separator.png" alt="pic" class="line1">
+                <a href="about.html" class="combo">
+                    <img src="Icon (26).png" alt="pic" class="mini">
+                    <p class="texting2">About</p>
+                </a>
+                <a href="services.html" class="combo">
+                    <img src="Icon (26).png" alt="pic" class="mini">
+                    <p class="texting2">Services</p>
+                </a>
+                <a href="projects.html" class="combo">
+                    <img src="Icon (26).png" alt="pic" class="mini">
+                    <p class="texting2">Our Projects</p>
+                </a>
+                <div class="combo">
+                    <img src="Icon (26).png" alt="pic" class="mini">
+                    <p class="texting2">Meet the Farmers</p>
+                </div>
+                <a href="news.html" class="combo">
+                    <img src="Icon (26).png" alt="pic" class="mini">
+                    <p class="texting2">Latest News</p>
+                </a>
+                <div class="combo">
+                    <img src="Icon (26).png" alt="pic" class="mini">
+                    <p class="texting2">Contact</p>
+                </div>
+            </div>
+            <div class="column3">
+                <p class="titles">News</p>
+                <img src="span.elementor-divider-separator.png" alt="pic" class="line">
+                <div class="col">
+                    <p class="texty">Bringing Food Production
+                        Back To Cities</p>
+                    <p class="date2">July 5, 2022</p>
+                </div>
+                <div class="col">
+                    <p class="texty">The Future of Farming,
+                        Smart Irrigation Solutions</p>
+                    <p class="date2">July 5, 2022</p>
+                </div>
+            </div>
+            <div class="column4">
+                <p class="titles">Contact</p>
+                <img src="span.elementor-divider-separator.png" alt="pic" class="line">
+                <div class="combo">
+                    <img src="Icon (27).png" alt="pic" class="mini">
+                    <p class="texting2">666 888 0000</p>
+                </div>
+                <div class="combo">
+                    <img src="Icon (28).png" alt="pic" class="mini">
+                    <p class="texting2">needhelp@company.com</p>
+                </div>
+                <div class="combo">
+                    <img src="Icon (29).png" alt="pic" class="mini">
+                    <p class="texting2">80 broklyn golden street line
+                        New York, USA</p>
+                </div>
+
+                <div class="form-container">
+                    <form class="area">
+                        <input type="text" name="myInput" placeholder="Your Email Address" required>
+                        <button type="submit" class="areas">
+                            <img src="Icon (15).png" alt="pic">
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="foot">
+        <div class="footbox">
+            <div class="columnbox">
+                <p class="reserved">© All Copyright 2024 by shawonetc Themes</p>
+            </div>
+            <div class="columnbox2">
+                <p class="reserved">Terms of Use | Privacy Policy</p>
+            </div>
+        </div>
+    </div>
 
     <script>
         document.getElementById("search-icon").addEventListener("click", function () {
@@ -257,10 +371,8 @@
         let priceLabel = document.getElementById('price-label');
 
         function updatePriceLabel() {
-            const values = document.getElementById('price-range').value.split(',');
-            const minValue = parseInt(values[0]);
-            const maxValue = parseInt(values[1]);
-            priceLabel.textContent = minValue + '$ - ' + maxValue + '$';
+            const currentValue = document.getElementById('price-range').value;
+            document.getElementById('price-label').textContent = '$' + currentValue + ' - $100';
         }
 
         updatePriceLabel();
@@ -273,17 +385,29 @@
         });
 
         applyButton.addEventListener('click', () => {
-            const values = document.getElementById('price-range').value.split(',');
-            const minValue = parseInt(document.getElementById('price-range').value);
-            const maxValue = parseInt(document.getElementById('price-range').max);
-
+            const currentValue = parseInt(document.getElementById('price-range').value);
             productCards.forEach(card => {
+                card.classList.remove('visible');
                 const price = parseFloat(card.querySelector('.dollar').textContent.replace('$', ''));
-                if (price < minValue || price > maxValue) {
-                    card.classList.remove('visible');
+                if (price >= currentValue && price <= 100) {
+                    card.classList.add('visible');
                 }
             });
         });
+
+        const products = [
+            { name: 'Apples', price: 50.00, image: 'https://i.ibb.co/LrLmpqB/9846d7967af7adf2bdbb2b63ab471238.jpg' },
+            { name: 'Bananas', price: 20.00, image: 'https://i.ibb.co/vY72Gr6/1694e5132f9297a102f515bc5e5b74ec.jpg' },
+            { name: 'Carrot', price: 50.00, image: 'https://i.ibb.co/xXfrJV1/c66c04d407f153bebf6ee51520e309f9.jpg' },
+            { name: 'Garlic', price: 20.00, image: 'https://i.ibb.co/qp9CZwZ/518232e6103dca3e15ea26ee403346b9.jpg' },
+            { name: 'Grapes', price: 100.00, image: 'https://i.ibb.co/N1vCNTN/145b0e8246f1f34fac6729e7fd52a07e.jpg' },
+            { name: 'Lettuce', price: 30.00, image: 'https://i.ibb.co/h9W12rM/55e89492860a4a6f89a0bd2b221630fe.jpg' },
+            { name: 'Onions', price: 20.00, image: 'https://i.ibb.co/CtQykXv/bedd52a8d0504170b14939dd44a5f9e4.jpg' },
+            { name: 'Potatos', price: 30.00, image: 'https://i.ibb.co/58HkY8n/2bf68a89da7ff5d51056e1ae5dbbc7a6.jpg' },
+            { name: 'Red Grapes', price: 100.00, image: 'https://i.ibb.co/Dt3H53G/94c085d133bdc4eb40467681c7a0fca1.jpg' }
+        ];
+
+        const cards = document.querySelectorAll('.card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9');
 
     </script>
 </body>
