@@ -924,7 +924,6 @@ h1 {
     padding: 15px 49.651px 15px 50px;
     justify-content: center;
     align-items: center;
-    margin-top: 35px;
 }
 
 footer {
@@ -963,6 +962,7 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 36px;
+    margin-bottom: 5px;
 }
 
 .combo {
@@ -975,7 +975,7 @@ footer {
 }
 
 .line1 {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .mini {

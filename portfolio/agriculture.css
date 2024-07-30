@@ -1347,6 +1347,7 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 36px;
+    margin-bottom: 5px;
 }
 
 .combo {
@@ -1359,7 +1360,7 @@ footer {
 }
 
 .line1 {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .mini {
