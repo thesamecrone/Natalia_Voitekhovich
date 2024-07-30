@@ -254,6 +254,14 @@ nav {
     text-decoration: none;
 }
 
+.home:hover {
+    color: rgba(197, 186, 155, 0.627);
+}
+
+.menuu:hover {
+    color: rgba(197, 186, 155, 0.627);
+}
+
 .arrow {
     margin-left: 5px;
     padding-top: 3px;
@@ -275,42 +283,46 @@ nav {
     font-weight: 600;
     line-height: 36px;
     align-items: center;
-  }
-  
-  .menu-label {
-    cursor: pointer; /* change cursor to a hand pointer on hover */
-  }
-  
-  .menu1 .submenu {
+}
+
+.menu-label {
+    cursor: pointer;
+}
+
+.menu1 .submenu {
     position: absolute;
-    top: 100%; /* position the submenu below the menu label */
+    top: 100%;
     left: 0;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     width: 255px;
     border-radius: 10px;
-    display: none; /* hide the submenu by default */
-  }
-  
-  .menu1:hover .submenu {
-    display: block; /* show the submenu when the menu label is hovered */
-  }
-  
-  .menu1 .submenu li {
+    display: none;
+}
+
+.menu1:hover .submenu {
+    display: block;
+    color: rgba(197, 186, 155, 0.627);
+}
+
+.menu1 .submenu li {
     list-style: none;
     margin-bottom: 10px;
-  }
-  
-  .menu1 .submenu a {
+}
+
+.menu1 .submenu a {
     text-decoration: none;
     color: #666;
-  }
-
+}
 
 .menu {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.menu-label:hover {
+    color: rgba(197, 186, 155, 0.627);
 }
 
 .menuu {
@@ -493,6 +505,7 @@ h1 {
     border-radius: 10px;
     background: #F8F7F0;
     margin-bottom: 30px;
+    gap: 10px;
 }
 
 .need {
@@ -581,6 +594,7 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
     margin-top: 120px;
+    margin-bottom: 120px;
 }
 
 .grass {
