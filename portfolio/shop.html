@@ -147,13 +147,20 @@
 
         <div class="block2">
             <div class="product-cards">
-                <img src="shop/image.png" alt="pic">
                 <div class="pagination">
                     Showing 1–9 of 9 results
-                    <button class="sort-button" id="sort-button">Сортировка</button>
+                    <div class="dropdown">
+                        <button class="sort-button" id="sort-button">Default sorting
+                            <img src="shop/image.png" alt="pic">
+                        </button>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <a href="#" id="sort-asc">Price: Low to High</a>
+                            <a href="#" id="sort-desc">Price: High to Low</a>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="cards-container">
+                <div class="cards-container" id="cards-container">
                     <div class="card1">
                         <img src="shop/9846d7967af7adf2bdbb2b63ab471238.jpg" alt="Product image" class="product">
                         <h5>Apples</h5>
@@ -387,7 +394,7 @@
             });
         });
 
-        const products = [
+        let products = [
             { name: 'Apples', price: 50.00, image: 'https://i.ibb.co/LrLmpqB/9846d7967af7adf2bdbb2b63ab471238.jpg' },
             { name: 'Bananas', price: 20.00, image: 'https://i.ibb.co/vY72Gr6/1694e5132f9297a102f515bc5e5b74ec.jpg' },
             { name: 'Carrot', price: 50.00, image: 'https://i.ibb.co/xXfrJV1/c66c04d407f153bebf6ee51520e309f9.jpg' },
@@ -399,7 +406,49 @@
             { name: 'Red Grapes', price: 100.00, image: 'https://i.ibb.co/Dt3H53G/94c085d133bdc4eb40467681c7a0fca1.jpg' }
         ];
 
-        const cards = document.querySelectorAll('.card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9');
+        function displayProducts(products) {
+            const container = document.getElementById('cards-container');
+            container.innerHTML = ''; // Очищаем контейнер перед добавлением новых элементов
+
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                card.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product">
+                    <h5>${product.name}</h5>
+                    <p class="dollar">$${product.price.toFixed(2)}</p>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        // Отображаем продукты при загрузке страницы
+        displayProducts(products);
+
+        function sortProductsAsc() {
+            const sortedProducts = products.slice().sort((a, b) => a.price - b.price);
+            displayProducts(sortedProducts);
+            document.getElementById('sort-button').innerHTML = 'Price: Low to High <img src="shop/image.png" alt="pic">';
+        }
+
+        function sortProductsDesc() {
+            const sortedProducts = products.slice().sort((a, b) => b.price - a.price);
+            displayProducts(sortedProducts);
+            document.getElementById('sort-button').innerHTML = 'Price: High to Low <img src="shop/image.png" alt="pic">';
+        }
+
+        document.getElementById('sort-asc').addEventListener('click', (event) => {
+            event.preventDefault();
+            sortProductsAsc();
+        });
+
+        document.getElementById('sort-desc').addEventListener('click', (event) => {
+            event.preventDefault();
+            sortProductsDesc();
+        });
+
 
     </script>
 </body>

@@ -820,7 +820,6 @@ footer {
 
 .area {
     border-radius: 10px;
-    border: 1px solid #F8F7F0;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.00) 100%), #FFF;
     height: 50px;
     width: 270px;
