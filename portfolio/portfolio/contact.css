@@ -612,6 +612,8 @@ iframe {
     padding: 21px 31px 20px 31px;
     font-size: 14px;
     color: #878680;
+    border: none;
+    outline: none
 }
 
 .smths {
@@ -627,6 +629,8 @@ iframe {
     font-weight: 500;
     color: #878680;
     margin-bottom: 20px;
+    border: none;
+    outline: none
 }
 
 .sub {
