@@ -637,6 +637,85 @@ input[type="range"]::-moz-range-thumb {
     margin-left: 30px;
 }
 
+#cart-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+.exit {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    color: white;
+    border: none;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card button {
+    position: absolute;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.product-card button.add {
+    top: 10px;
+    right: 10px;
+    background-color: green;
+    color: white;
+}
+
+.product-card button.remove {
+    bottom: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+}
+
+
+.product-card button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .pagination {
     display: flex;
     justify-content: space-between;

@@ -102,9 +102,12 @@
             </form>
             <img src="header.png" id="cart-icon" class="basket">
             <div id="cart-content" style="display: none;">
+                <button onclick="toggleCart()" class="exit">X</button>
                 <p id="cart-message">Here is empty</p>
+                <div id="cart-items"></div>
+                <div id="cart-total"></div>
             </div>
-            <div class="circle">0</div>
+            <div class="circle" onclick="toggleCart()">0</div>
         </div>
     </section>
 
@@ -371,28 +374,13 @@
 
         function updatePriceLabel() {
             const currentValue = document.getElementById('price-range').value;
-            document.getElementById('price-label').textContent = '$' + currentValue + ' - $100';
+            priceLabel.textContent = '$' + currentValue + ' - $100';
         }
 
         updatePriceLabel();
 
-        const productCards = document.querySelectorAll('.card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9');
-        const applyButton = document.getElementById('apply-button');
-
-        productCards.forEach(card => {
-            card.classList.add('visible');
-        });
-
-        applyButton.addEventListener('click', () => {
-            const currentValue = parseInt(document.getElementById('price-range').value);
-            productCards.forEach(card => {
-                card.classList.remove('visible');
-                const price = parseFloat(card.querySelector('.dollar').textContent.replace('$', ''));
-                if (price >= currentValue && price <= 100) {
-                    card.classList.add('visible');
-                }
-            });
-        });
+        // Обновляем метку при изменении значения диапазона цен
+        document.getElementById('price-range').addEventListener('input', updatePriceLabel);
 
         let products = [
             { name: 'Apples', price: 50.00, image: 'https://i.ibb.co/LrLmpqB/9846d7967af7adf2bdbb2b63ab471238.jpg' },
@@ -406,49 +394,61 @@
             { name: 'Red Grapes', price: 100.00, image: 'https://i.ibb.co/Dt3H53G/94c085d133bdc4eb40467681c7a0fca1.jpg' }
         ];
 
+
         function displayProducts(products) {
             const container = document.getElementById('cards-container');
             container.innerHTML = ''; // Очищаем контейнер перед добавлением новых элементов
 
             products.forEach(product => {
                 const card = document.createElement('div');
-                card.className = 'card';
+                card.className = 'card'; // Убираем класс visible
 
                 card.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}" class="product">
-                    <h5>${product.name}</h5>
-                    <p class="dollar">$${product.price.toFixed(2)}</p>
-                `;
+            <img src="${product.image}" alt="${product.name}" class="product">
+            <h5>${product.name}</h5>
+            <p class="dollar">$${product.price.toFixed(2)}</p>
+        `;
 
                 container.appendChild(card);
             });
         }
 
-        // Отображаем продукты при загрузке страницы
-        displayProducts(products);
+        function applyFilter() {
+            const currentValue = parseInt(document.getElementById('price-range').value);
+            const filteredProducts = products.filter(product => product.price >= currentValue && product.price <= 100);
+            displayProducts(filteredProducts);
+            return filteredProducts;
+        }
 
-        function sortProductsAsc() {
-            const sortedProducts = products.slice().sort((a, b) => a.price - b.price);
+        document.getElementById('apply-button').addEventListener('click', () => {
+            const filteredProducts = applyFilter();
+            // Сортировка после применения фильтра
+            document.getElementById('sort-asc').addEventListener('click', (event) => {
+                event.preventDefault();
+                sortProductsAsc(filteredProducts);
+            });
+
+            document.getElementById('sort-desc').addEventListener('click', (event) => {
+                event.preventDefault();
+                sortProductsDesc(filteredProducts);
+            });
+        });
+
+        function sortProductsAsc(productsToSort) {
+            const sortedProducts = productsToSort.slice().sort((a, b) => a.price - b.price);
             displayProducts(sortedProducts);
             document.getElementById('sort-button').innerHTML = 'Price: Low to High <img src="shop/image.png" alt="pic">';
         }
 
-        function sortProductsDesc() {
-            const sortedProducts = products.slice().sort((a, b) => b.price - a.price);
+        function sortProductsDesc(productsToSort) {
+            const sortedProducts = productsToSort.slice().sort((a, b) => b.price - a.price);
             displayProducts(sortedProducts);
             document.getElementById('sort-button').innerHTML = 'Price: High to Low <img src="shop/image.png" alt="pic">';
         }
 
-        document.getElementById('sort-asc').addEventListener('click', (event) => {
-            event.preventDefault();
-            sortProductsAsc();
-        });
+        displayProducts(products);
 
-        document.getElementById('sort-desc').addEventListener('click', (event) => {
-            event.preventDefault();
-            sortProductsDesc();
-        });
-
+        applyFilter();
 
     </script>
 </body>
