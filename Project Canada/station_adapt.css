@@ -1,0 +1,261 @@
+@media (max-width: 2880px) {
+    .desc {
+        width: 50%;
+        font-size: 28px;
+        line-height: 56px;
+        margin-left: 2%;
+        background-color: #b9e9f587;
+        border-radius: 5px;
+        padding: 3%;
+    }
+}
+
+@media (max-width: 1480px) {
+    .desc {
+        margin-bottom: 10%;
+        width: 40%;
+        font-size: 21px;
+        line-height: 33px;
+        margin-left: 7%;
+    }
+}
+
+@media (max-width: 1030px) {
+    .desc {
+        background-color: #b9e9f587;
+        border-radius: 5px;
+        padding: 5%;
+        width: 100%;
+    }
+
+    h4 {
+        padding: 10px;
+        margin-top: 5%;
+        margin-bottom: 6%;
+    }
+
+    .description {
+        height: 245px;
+    }
+
+    .categories__title {
+        width: 90%;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        padding-left: 2%;
+    }
+
+    .iconns {
+        width: 65%;
+        gap: 25px;
+        margin-top: 10%;
+    }
+
+    .icons {
+        margin-left: 13%;
+    }
+
+    h4 {
+        padding: 0px;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .animate-character {
+        padding-left: 0%;
+    }
+
+    .early {
+        margin-top: 35%;
+    }
+
+    .day2 {
+        margin-top: 35%;
+    }
+
+    .roadmap {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 1030px) {
+    .description {
+        height: 280px;
+    }
+
+    .questions {
+        font-size: 30px;
+    }
+
+    .aboutus {
+        font-size: 23px;
+    }
+
+    .departure {
+        font-size: 25px;
+        padding-top: 5%;
+    }
+}
+
+@media (max-width: 780px) {
+    .icons {
+        width: 87%;
+    }
+
+    .park {
+        font-size: 110px;
+    }
+
+    .iconns {
+        width: 76%;
+    }
+
+    .desc {
+        margin-left: 0%;
+    }
+}
+
+@media (max-width: 480px) {
+    .official {
+        padding-left: 35px;
+        font-size: 38px;
+    }
+
+    .icons {
+        width: 45%;
+    }
+
+    .park {
+        font-size: 66px;
+        word-break: break-all;
+    }
+
+    .dream {
+        margin-left: 0px;
+        width: 100%;
+        font-size: 28px;
+    }
+
+    .magic {
+        width: 85px;
+        height: 35px;
+    }
+
+    .day2 {
+        align-items: center;
+        gap: 45px;
+    }
+
+    .description {
+        margin-top: 15%;
+        height: 240px;
+    }
+
+    .departure {
+        font-size: 20px;
+        padding-left: 25px;
+    }
+
+    .questions {
+        margin-left: 5%;
+        font-size: 27px;
+    }
+
+    .aboutus {
+        font-size: 17px;
+    }
+
+    .team {
+        font-size: 60px;
+    }
+
+    .categories__title {
+        font-size: 22px;
+    }
+
+    a {
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .words {
+        line-height: 21px;
+        padding: 16px;
+        font-size: 27px;
+    }
+
+}
+
+@media (max-width: 380px) {
+    .start {
+        font-size: 14px;
+        padding: 19px;
+        line-height: 21px;
+    }
+
+    .description {
+        padding: 5%;
+        font-size: 18px;
+    }
+
+    .departure {
+        font-size: 15px;
+    }
+
+    .official {
+        font-size: 30px;
+    }
+
+    .dream {
+        font-size: 26px;
+    }
+
+    .magic {
+        width: 61px;
+        height: 27px;
+    }
+
+    h3 {
+        margin-left: 60px;
+    }
+
+    .icons {
+        margin-top: 15%;
+    }
+}
+
+@media (max-width: 380px) {
+    .dream {
+        font-size: 23px;
+    }
+
+    .animate-character {
+        font-size: 35px;
+    }
+
+    .desc {
+        font-size: 13px;
+        line-height: 23px;
+    }
+
+    .park {
+        font-size: 55px;
+    }
+
+    .description {
+        height: 270px;
+    }
+
+    .categories__title {
+        font-size: 20px;
+        width: 83%;
+    }
+
+    .team {
+        font-size: 45px;
+    }
+
+    .questions {
+        font-size: 24px;
+    }
+}
