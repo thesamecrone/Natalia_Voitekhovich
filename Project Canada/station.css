@@ -591,7 +591,9 @@ iframe {
   line-height: 32px;
   word-wrap: break-word;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
 }
 
 .description {
@@ -604,7 +606,6 @@ iframe {
   text-align: center;
   border-radius: 50px;
   background-color: rgba(240, 248, 255, 0.812);
-  margin-bottom: 100px;
   animation: animate_pulse2 4s infinite;
 }
 
