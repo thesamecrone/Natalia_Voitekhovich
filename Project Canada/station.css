@@ -186,6 +186,7 @@ a:hover {
 .magic:hover {
   -webkit-transform: rotate(15deg);
   transform: rotate(15deg);
+  cursor: pointer;
 }
 
 .info {
@@ -195,32 +196,16 @@ a:hover {
 
 @keyframes moveText {
   0% {
-
-
     transform: translateX(0);
-
-
   }
-
 
   50% {
-
-
     transform: translateX(200px);
-
-
   }
-
 
   100% {
-
-
     transform: translateX(0);
-
-
   }
-
-
 }
 
 .official {
