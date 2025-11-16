@@ -8,6 +8,10 @@
         border-radius: 5px;
         padding: 3%;
     }
+
+    .page2 {
+        height: 1200px;
+    }
 }
 
 @media (max-width: 1480px) {
