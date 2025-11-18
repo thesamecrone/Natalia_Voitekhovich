@@ -290,6 +290,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .media img {
@@ -579,6 +580,7 @@ iframe {
   align-items: center;
   justify-content: center;
   gap: 5%;
+  padding-bottom: 10%;
 }
 
 .description {
@@ -615,6 +617,7 @@ iframe {
 .page5 {
   background-image: url(images/802381.jpg);
   background-size: cover;
+  padding-bottom: 5%;
 }
 
 .day3 {
@@ -637,6 +640,7 @@ iframe {
   color: #ddd;
   font-size: 30px;
   padding-bottom: 5%;
+  padding-top: 5%;
 }
 
 .carousel {
